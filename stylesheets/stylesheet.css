@@ -375,6 +375,10 @@ Small Device Styles
 *******************************************************************************/
 
 @media screen and (max-width: 480px) {
+
+  div.slide{
+  background: #212121;
+}
   body {
     font-size:14px;
   }
