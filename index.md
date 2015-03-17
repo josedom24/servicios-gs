@@ -3,57 +3,44 @@ layout: index
 ---
 
 
-### Ejercicio:  Configuración de proFTPd para usar usuarios virtuales con ldap
+### Ejercicio: Estudio de distintos alojamientos Web
 
-Al igual que otros muchos servicios proftp puede almacenar la información de autenticación de usuarios en LDAP, por lo que se suele denominar a éstos usuarios virtuales para diferenciarlos de los usuarios reales o del sistema.
+Trabajamos para una empresa que necesita publicar una página web en internet y nos piden que hagamos un estudio y un presupuestos de las posibilidades que nos da el mercado. Se nos pide que se haga el estudio con empresas que sean españolas.
 
-En Debian lenny al instalar el paquete proftpd, se instala por dependencias el paquete proftpd-mod-ldap, por lo que no deberemos instalar ningún paquete adicional sino "activar" este método de autenticación.
+Para poder publicar una página web, tenemos que tener en cuenta los siguientes aspectos:
 
-Editamos el fichero /etc/proftpd/modules.conf y buscamos la línea:
+1. Registrar un dominio
 
-~~~ bash
-#LoadModule mod_ldap.c
-~~~
+<div class='ejercicios' markdown='1'>
+##### **Ejercicios**
 
-La descomentamos para que cuando se reinicie el servidor cargue el módulo de LDAP.
+La empresa necesita un dominio .com, busca la mejor empresa que facilite el registro de un dominio, ¿cuánto dinero cuesta al año?
+</div>
 
-Editamos el fichero /etc/proftpd/proftpd.conf y buscamos la línea:
+2. Buscar alojamiento web en un servidor en una empresa de hosting
 
-        #Include /etc/proftpd/ldap.conf
+Necesitamos un alojamiento web con las siguientes características:
 
-También la descomentamos y editamos el fichero /etc/proftpd/ldap.conf, en el que dejamos las tres líneas siguientes:
+* 10000 MB (aprox. 10 GB) de capacidad de alojamiento.
+* 500 GB de transferencia mensual.
+* Acceso por FTP
+* Soporte de PHP y mySql
+* 500 cuentas de correo con webmail
 
-        LDAPServer ldap://localhost/??sub LDAPDNInfo "cn=admin,dc=cursolinux,dc=net" "asdasd" LDAPDoAuth on "ou=People,dc=cursolinux,dc=net"
+<div class='ejercicios' markdown='1'>
+##### **Ejercicios**
 
-Donde especificamos el servidor LDAP, el nombre distinguido del usuario que se conecta, su contraseña y la ubicación de la rama que contiene los usuarios.
+Tenemos que hacer un presupuesto para la la empresa conozca los siguiente precios por año:
 
-Además, para que puedan autenticarse usuarios con la shell (/bin/false) hay que descomentar la directiva:
+* Si el servidor es compartido
+* Si el servidor es dedicado
+* Si el servidor tiene sistema operativo Windows
+* Si el servidor tiene sistema operativo Linux
 
-        #RequireValidShell off 
+Estudia también un presupuesto que indique el coste de un servidor, con las características anteriormente señaladas, que use la tecnología de cloud computing.
 
-Después de hacer todas estas modificaciones reiniciamos el demonio con:
+</div>
+Se valorará por parte de la empresa el presupuesto que cumpla las prestaciones indicadas que sea más barato.
 
-        /etc/init.d/proftpd restart 
-
-**Prueba de funcionamiento**
-
-Vamos a crear un usuario virtual que tendrá su directorio home en /srv/ftp/usuario y como shell /bin/false para que no pueda nunca abrir una sesión en el sistema. Creamos el fichero usuario-ftp.ldif con el siguiente contenido:
-
-        dn: cn=ftpusers,ou=Group,dc=cursolinux,dc=net objectClass: posixGroup objectClass: top cn: ftpusers gidNumber: 2002
-
-        dn: uid=rigoberta,ou=People,dc=cursolinux,dc=net uid: rigoberta cn: Rigoberta objectclass: account objectclass: posixAccount objectclass: top uidNumber: 2002 gidNumber: 2002 homeDirectory: /srv/ftp/rigoberta userPassword: {MD5}qPXxZ/RPSWTmyZje6CcRDA== loginShell: /bin/false
-
-Y lo añadimos al directorio con:
-
-        ldapadd -x -D "cn=admin,dc=cursolinux,dc=net" -W -f usuario-ftp.ldif
-
-Creamos el directorio del usuario y le damos los propietarios y permisos adecuados con:
-
-        mkdir -p /srv/ftpusers/rigoberta 
-        chgrp 2002 /srv/ftpusers 
-        chown 2002 /srv/ftpusers/rigoberta 
-        chmod 700 /srv/ftpusers/rigoberta
-
-Finalmente probamos con un cliente ftp la conexión con este usuario.
 
 [Volver](index)
