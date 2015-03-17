@@ -375,10 +375,7 @@ Small Device Styles
 *******************************************************************************/
 
 @media screen and (max-width: 480px) {
-
-div.slide{
-  visible:hidden;
-} 
+ 
   body {
     font-size:14px;
   }
