@@ -11,7 +11,9 @@ En Debian lenny al instalar el paquete proftpd, se instala por dependencias el p
 
 Editamos el fichero /etc/proftpd/modules.conf y buscamos la línea:
 
-        #LoadModule mod_ldap.c
+~~~ bash
+#LoadModule mod_ldap.c
+~~~
 
 La descomentamos para que cuando se reinicie el servidor cargue el módulo de LDAP.
 
