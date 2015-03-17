@@ -377,8 +377,7 @@ Small Device Styles
 @media screen and (max-width: 480px) {
 
 div.slide{
-  float:;
-  background: #212121;
+  visible:hidden;
 } 
   body {
     font-size:14px;
