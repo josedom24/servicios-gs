@@ -52,5 +52,11 @@ background: -moz-linear-gradient(top, #C3001D 0%, #950119 100%);
         {float:left;
         padding:40px;
         background: #212121;}
+@media screen and (max-width: 480px) {
 
+div.slide{
+  visible:hidden;
+} 
+
+}
 
