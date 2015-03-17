@@ -15,7 +15,7 @@ if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
     # Sync the README.md in master to index.md adding jekyll header
     ###################################################################
     git checkout master -- README.md
-    echo -e $LAYOUT_PREFIX > index.md
+    echo -e $LAYOUT_PREFIX >> index.md
     cat README.md >> index.md
     rm README.md
     git add index.md
