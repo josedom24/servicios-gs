@@ -2,7 +2,7 @@
 ###
 ### The following block runs after commit to "master" branch
 ###
-if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
+#if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
 
     # Layout prefix is prepended to each markdown file synced
     ###################################################################
@@ -43,4 +43,3 @@ if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
 
     # Finally, switch back to the master branch and exit block
     git checkout master
-fi
