@@ -12,9 +12,10 @@ if branch=="master":
 	#os.system("git checkout gh-pages")
 	os.system("git checkout gh-pages")
 	for fich in lista_fich:
+		
+		os.system("git checkout master -- %s" % fich)
 		if fich=="README.md":
 			fich="index.md"
-		os.system("git checkout master -- %s" % fich)
 		os.system("echo '%s'>%s"%(layout_prefix,fich+".tmp"))
 		os.system("cat %s>>%s"%(fich,fich+".tmp"))
 		os.system("cat %s>>%s"%(fich+".tmp",fich))
