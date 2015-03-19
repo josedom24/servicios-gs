@@ -20,6 +20,14 @@ if branch=="master":
 					os.system("mv %s index.md"%fich)
 					fich="index.md"
 				print "Sync %s de master a gh-pages" % fich
+				f=open(fich,"r")
+				contenido=r.read()
+				f.close()
+				contenido=contenido.repace(".md)",")")
+				f=open(fich,"w")
+				f.write(contenido)
+				f.close()
+	
 				os.system("git add %s"%fich)
 				os.system('git commit -am "Sync %s de master a gh-pages"' % fich)
 		os.system('git push')
