@@ -16,4 +16,4 @@ layout: index
 * [Repaso de conceptos de red](repaso)
 * [Ejercicios sobre DNS](dns)
 
-[Volver](/servicios-gs)
+[Volver](/servicios-gs/index)
