@@ -23,7 +23,7 @@ if branch=="master":
 				f=open(fich,"r")
 				contenido=f.read()
 				f.close()
-				contenido=contenido.repace(".md)",")")
+				contenido=contenido.replace(".md)",")")
 				f=open(fich,"w")
 				f.write(contenido)
 				f.close()
