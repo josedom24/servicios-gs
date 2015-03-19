@@ -6,7 +6,7 @@ layout: index
 
 ### Objetivos
 
-* Introducir el concepto y los tipos de **servicio**, así cómo sus características y funcionalidades principales.
+* Introducir el concepto y los tipos de **servicios**, así cómo sus características y funcionalidades principales.
 * Repasar conceptos del protocolo TCP/IP y de redes en general.
 * Repasar e introducir los conceptos de funcionamiento de DNS.
 
