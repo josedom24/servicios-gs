@@ -13,6 +13,7 @@ layout: index
 ### Contenido
 
 * [Presentación: Introducción a los servicios de red]()
-* [repaso de conceptos de red]()
+* [Repaso de conceptos de red](repaso)
+* [Ejercicios sobre DNS](dns)
 
 [Volver](/servicios-gs)
