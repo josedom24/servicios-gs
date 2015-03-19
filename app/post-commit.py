@@ -1,7 +1,6 @@
 #!/usr/bin/python
 import commands,os
-layout_prefix='''
----
+layout_prefix='''---
 layout: index
 ---
 '''
