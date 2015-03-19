@@ -10,5 +10,6 @@
 
 * [Presentación: Introducción a los servicios de red]()
 * [Repaso de conceptos de red](repaso.md)
+* [Ejercicios sobre DNS](dns.md)
 
 [Volver](/servicios-gs)

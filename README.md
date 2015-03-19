@@ -25,7 +25,7 @@ Las unidades del módulos son las siguientes:
 1. [Introducción a los servicios en red y puesta en marcha del entorno de trabajo](curso/u1/index.md)
 2. [Servidores de configuración dinámica de sistemas (DHCP)](curso/u2/index.md)
 3. [Servidores Web](curso/u3/index.md)
-4. [Servidores de resolución de nombres (DNS)]()
+4. [Servidores de resolución de nombres (DNS)](curso/u4/index.md)
 5. [Servidores de transferencia de ficheros (FTP)]()
 6. Servidores proxy-cache
 7. Servidores de correo electrónico
