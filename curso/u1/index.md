@@ -12,4 +12,4 @@
 * [Repaso de conceptos de red](repaso.md)
 * [Ejercicios sobre DNS](dns.md)
 
-[Volver](/servicios-gs)
+[Volver](/servicios-gs/index.md)
