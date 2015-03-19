@@ -9,6 +9,6 @@
 ### Contenido
 
 * [Presentación: Introducción a los servicios de red]()
-* [Repaso de conceptos de red](reapso.md)
+* [Repaso de conceptos de red](repaso.md)
 
 [Volver](/servicios-gs)
