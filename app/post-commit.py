@@ -19,8 +19,10 @@ if branch=="master":
 				os.system("rm %s"%fich+".tmp")
 				if fich=="README.md":
 					os.system("mv %s index.md"%fich)
+					fich="index.md"
 				print "Sync %s de master a gh-pages" % fich
-		os.system('git commit -am "Sync %s de master a gh-pages"' % fich)
+				os.system("git add %s"%fich)
+				os.system('git commit -am "Sync %s de master a gh-pages"' % fich)
 		os.system('git push')
 		os.system("git checkout master")
 else:
