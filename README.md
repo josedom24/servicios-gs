@@ -22,7 +22,7 @@ Al finalizar este módulo el alumno deberá conocer los siguientes aspectos:
 
 Las unidades del módulos son las siguientes:
 
-1. [Introducción a los servicios en red y puesta en marcha del entorno de trabajo](curso/u1/index.md)
+1. [Introducción a los servicios en red y puesta en marcha del entorno de trabajo](curso/u1/index)
 2. [Servidores de configuración dinámica de sistemas (DHCP)]()
 3. [Servidores Web]()
 4. [Servidores de resolución de nombres (DNS)]()
