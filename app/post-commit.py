@@ -14,12 +14,14 @@ if branch=="master":
 	for fich in lista_fich:
 		
 		os.system("git checkout master -- %s" % fich)
-		if fich=="README.md":
-			fich="index.md"
+		
+
 		os.system("echo '%s'>%s"%(layout_prefix,fich+".tmp"))
 		os.system("cat %s>>%s"%(fich,fich+".tmp"))
-		os.system("cat %s>>%s"%(fich+".tmp",fich))
+		os.system("cat %s>%s"%(fich+".tmp",fich))
 		os.system("rm %s"%fich+".tmp")
+		if fich=="README.md":
+			os.system("mv %s index.md"%fich)
 		print "Sync %s de master a gh-pages" % fich
 		os.system('git commit -am "Sync %s de master a gh-pages"' % fich)
 	os.system("git checkout master")
