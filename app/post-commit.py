@@ -18,7 +18,7 @@ if branch=="master":
 		os.system("echo '%s'>%s"%(layout_prefix,fich+".tmp"))
 		os.system("cat %s>>%s"%(fich,fich+".tmp"))
 		os.system("rm %s"%fich+".tmp")
-		os.system('git commit -am "Sync %s de master a gh-pages' % fich)
+		os.system('git commit -am "Sync %s de master a gh-pages"' % fich)
 	os.system("git checkout master")
 else:
 	print "Debes estar en la rama master"
