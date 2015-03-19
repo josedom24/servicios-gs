@@ -1,5 +1,3 @@
-Veremos a ver
-ahora
 
 ---
 layout: index
@@ -7,3 +5,4 @@ layout: index
 
 Veremos a ver
 ahora
+ya seguro
